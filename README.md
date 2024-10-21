@@ -1,4 +1,6 @@
 <h1 style="text-align: center;">Poc 5 - React</h1>
+<p>Rodrigo Mello | RA: 10409316</p>
+
 
 ## Estrutura de Projeto Next.js 14 ou Superior
 
@@ -119,3 +121,33 @@ CSS Módulo permite a modularização dos estilos, isolando a estilização de c
     }
 
 Com isso, você pode criar estilos específicos para cada componente sem afetar outros componentes.
+
+## Prints
+
+A página inicial de exemplo para minha POC possui o código:
+
+    export default function Home() {
+      return (
+        PostComponent({title: "Hello World", content: "This is a blog post."})
+      );
+    }
+
+E layout:
+
+    export default function RootLayout({ children }) {
+        return (
+            <html lang="en">
+                <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                    <HeaderComponent/>
+                    {children}
+                </body>
+            </html>
+        );
+    }
+
+Dessa forma ele possui um Header que é um componente presente em todas as páginas e um post presente apenas nela.
+Print:
+![Página Inicial](./src/page.png)
+
+Print 404:
+![404](./src/404.png)
